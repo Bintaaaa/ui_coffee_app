@@ -38,7 +38,7 @@ class HomePage extends StatelessWidget {
           right: defaultMargin,
         ),
         child: Row(
-          children: [
+          children:const [
             ItemFilterMenu(),
             ItemFilterMenu(),
             ItemFilterMenu(),
@@ -53,24 +53,33 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            header(),
-            menu(),
-            Row(
-              children: [
-                ItemCoffee(),
-                ItemCoffee(),
-              ],
-            ),
-            Row(
-              children: [
-                ItemCoffee(),
-                ItemCoffee(),
-              ],
-            ),
-          ],
+        child: SingleChildScrollView(
+          scrollDirection: Axis.vertical,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              header(),
+              menu(),
+              Row(
+                children: const [
+                  ItemCoffee(),
+                  ItemCoffee(),
+                ],
+              ),
+              Row(
+                children: const [
+                  ItemCoffee(),
+                  ItemCoffee(),
+                ],
+              ),
+              Row(
+                children: const [
+                  ItemCoffee(),
+                  ItemCoffee(),
+                ],
+              ),
+            ],
+          ),
         ),
       ),
     );
