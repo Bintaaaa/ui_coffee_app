@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:coffee_app/style/colors.dart';
 import 'package:coffee_app/style/text.dart';
+import 'package:coffee_app/ui/page/register_page.dart';
 import 'package:flutter/material.dart';
 
 class SplashScreenPage extends StatefulWidget {
